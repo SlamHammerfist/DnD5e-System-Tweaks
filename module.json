@@ -1,8 +1,8 @@
 {
-  "id": "dnd-sheet-tweaks",
-  "title": "DnD5e Sheet Tweaks",
+  "id": "dnd-system-tweaks",
+  "title": "Dungeons & Dragons System Tweaks",
   "description": "UI and UX improvements for the DnD5e character sheet.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13"

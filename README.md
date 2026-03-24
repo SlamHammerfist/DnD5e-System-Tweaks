@@ -7,11 +7,15 @@ This module adds small UX improvements.
 
 ## ✨ Features
 
-- Disable item tooltips
-- Expand item names on click
+- Add a journal tab to charater sheets
+- Auto mark defeated NPCs with the dead condition
 - Collapsible inventory headers
 - Containers roll consumables
+- Disable item tooltips
 - Electrum removal
+- Expand item names on click
+- Hide price column from players
+
 All features are toggleable in module settings.
 
 ---

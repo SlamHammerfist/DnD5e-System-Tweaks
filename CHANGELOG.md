@@ -1,3 +1,9 @@
+1.5.0 — The Combat Update
+- Added Auto mark NPCs dead
+- Added hide prices from actors
+- Added Journal Tab to actor sheet for adding personal notes
+- Change from dnd5e sheet tweaks to dnd5e system tweaks
+
 1.4.0 — Cleanup & Refocus
 - Removed Item Browser integration (now planned as a standalone module)
 - Cleaned up global hooks and feature registration

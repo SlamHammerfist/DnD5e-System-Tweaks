@@ -1,41 +1,104 @@
 /* --------------------------------------------------------- */
-/*  COLLAPSE BUTTON                                          */
+/* SHEET & JOURNAL TWEAKS                                    */
 /* --------------------------------------------------------- */
 
+/* Header Collapse Toggle */
 .dnd5e2 .header-collapse-toggle {
-  background: none;
-  border: none;
-  padding: 0 4px 0 0;
-  margin: 0;
-  color: var(--color-text-dark-4);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  outline: none;
-  box-shadow: none;
+    background: none; 
+    border: none; 
+    padding: 0 4px 0 0; 
+    margin: 0;
+    color: var(--color-text-dark-4); 
+    cursor: pointer; 
+    display: flex;
+    align-items: center; 
+    font-size: 0.9rem; 
+    outline: none; 
+    box-shadow: none;
+}
+.dnd5e2 .header-collapse-toggle i { 
+    transition: transform 0.2s ease; 
+}
+.dnd5e2 .items-header.header.collapsed .header-collapse-toggle i { 
+    transform: rotate(-90deg); 
 }
 
-.dnd5e2 .header-collapse-toggle i {
-  transition: transform 0.2s ease;
+/* Journal Tab Logic */
+.dnd5e2.sheet.character:has(.journal-tab.active) .tab-body { 
+    padding-top: 0 !important; 
 }
 
-.dnd5e2 .items-header.header.collapsed .header-collapse-toggle i {
-  transform: rotate(-90deg);
+.journal-tab { 
+    display: none !important; 
+}
+
+.journal-tab.active {
+    display: flex !important; 
+    flex-direction: column; 
+    height: 100%;
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 5px;
+}
+
+.journal-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid var(--dnd5e-color-gold); 
+    margin-bottom: 0.5rem; 
+    padding-bottom: 0.25rem;
+}
+
+.header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+}
+
+.header-left dnd5e-icon { 
+    width: 20px; 
+    height: 20px; 
+}
+
+.header-left h3 { 
+    font-size: 14px; 
+    font-family: var(--dnd5e-font-roboto-upper); 
+    margin: 0; 
+    padding: 0; 
+    border: none; 
+}
+
+.header-right { 
+    font-size: 1rem; 
+    color: var(--color-text-dark-primary); 
+    opacity: 0.7; 
+}
+
+.sheet-tweaks-journal { 
+    margin-bottom: 1.5rem; 
+    display: flex; 
+    flex-direction: column; 
 }
 
 /* --------------------------------------------------------- */
-/*  ITEM BUTTON                                              */
+/* CURRENCY & ELECTRUM REMOVAL                               */
 /* --------------------------------------------------------- */
 
-.dnd5e2 .item-browser-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
+/* Hide Electrum icons/labels in standard and merchant sheets */
+.currency.ep, 
+[data-denomination="ep"], 
+.ep-header, 
+.ep-value {
+    display: none !important;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* --------------------------------------------------------- */
+/* UTILITY & TOOLTIPS                                        */
+/* --------------------------------------------------------- */
 
-  padding: 0;
+/* If you have specific item name expansion styles, keep them here */
+.dnd5e2 .item-name.expanded {
+    white-space: normal;
+    height: auto;
 }
